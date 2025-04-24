@@ -1,11 +1,21 @@
 from pathlib import Path
 import sys
 
+# --- もしも ml_notify がインストールされていない場合のための処理 ---
 # ホームディレクトリにあることを想定
 sys.path.append(str(Path.home() / "ml_notify"))
 
-from notifier.decorators import slack_notify
-
+try:
+    from notifier.decorators import slack_notify
+except ImportError:
+    print("Warning: 'notifier.decorators' could not be imported. Slack notifications will be disabled.")
+    
+    def slack_notify(task_name="Task"):
+        def noop_decorator(func):
+            return func
+        return noop_decorator
+# --- ここまで ---
+    
 @slack_notify(task_name="Model training")
 def train_model(params):
     print("Training with:", params)
