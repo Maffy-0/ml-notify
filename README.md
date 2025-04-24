@@ -14,6 +14,7 @@
 {
   "slack_webhook_url": "https://hooks.slack.com/services/XXX/YYY/ZZZ"
 }
+```
 
 通知機能を使用したいプロジェクト内で，ml_notify をパスに追加します．
 
