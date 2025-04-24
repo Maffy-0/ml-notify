@@ -1,0 +1,5 @@
+slack_config.json
+**.pyc
+__pycache__/
+*.pyo
+*.pyd
