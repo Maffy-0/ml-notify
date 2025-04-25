@@ -3,7 +3,7 @@ import urllib.request
 from pathlib import Path
 
 def load_webhook_url():
-    config_path = Path.home() / "ml_notify" / "slack_config.json"
+    config_path = Path.home() / "ml-notify" / "slack_config.json"
     if not config_path.exists():
         return None
     try:

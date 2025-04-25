@@ -16,12 +16,12 @@
 }
 ```
 
-通知機能を使用したいプロジェクト内で，ml_notify をパスに追加します．
+通知機能を使用したいプロジェクト内で，ml-notify をパスに追加します．
 
 ```python
 import sys
 from pathlib import Path
-sys.path.append(str(Path.home() / "ml_notify"))
+sys.path.append(str(Path.home() / "ml-notify"))
 
 from notifier.decorators import slack_notify
 

@@ -1,9 +1,9 @@
 from pathlib import Path
 import sys
 
-# --- もしも ml_notify がインストールされていない場合のための処理 ---
+# --- もしも ml-notify がインストールされていない場合のための処理 ---
 # ホームディレクトリにあることを想定
-sys.path.append(str(Path.home() / "ml_notify"))
+sys.path.append(str(Path.home() / "ml-notify"))
 
 try:
     from notifier.decorators import slack_notify
